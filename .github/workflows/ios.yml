@@ -7,8 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
-    name: Build and Test default scheme using any available iPhone simulator
+  deployment:
     runs-on: macos-latest
     environment: 
       - name: production
@@ -17,6 +16,11 @@ jobs:
         url: https://github.com/galihg/ios-short-continuous-integration/staging
       - name: development
         url: https://github.com/galihg/ios-short-continuous-integration/dev
+    steps:
+      name: deploy
+  build:
+    name: Build and Test default scheme using any available iPhone simulator
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
