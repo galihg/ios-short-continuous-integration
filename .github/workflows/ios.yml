@@ -10,7 +10,13 @@ jobs:
   build:
     name: Build and Test default scheme using any available iPhone simulator
     runs-on: macos-latest
-
+    environment: 
+      - name: production
+        url: https://github.com/galihg/ios-short-continuous-integration
+      - name: staging
+        url: https://github.com/galihg/ios-short-continuous-integration/staging
+      - name: development
+        url: https://github.com/galihg/ios-short-continuous-integration/dev
     steps:
       - name: Checkout
         uses: actions/checkout@v4
