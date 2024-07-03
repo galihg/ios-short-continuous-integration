@@ -59,7 +59,7 @@ jobs:
     runs-on: macos-latest
     needs: build
     environment:
-      name: "Development"
+      name: "Staging"
       url: https://github.com/galihg/ios-short-continuous-integration/staging
 
   deployProd:
