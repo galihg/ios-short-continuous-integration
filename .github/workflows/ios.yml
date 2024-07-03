@@ -7,13 +7,6 @@ on:
     branches: [ "master" ]
 
 jobs:
-  deployment:
-    runs-on: macos-latest
-    environment: 
-      name: production
-      url: https://github.com/galihg/ios-short-continuous-integration
-    steps:
-      name: deploy
   build:
     name: Build and Test default scheme using any available iPhone simulator
     runs-on: macos-latest
